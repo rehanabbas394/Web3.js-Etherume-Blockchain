@@ -61,6 +61,4 @@ export class AppService {
       throw new Error("Contract method call failed");
     }
   }
-  
-  
 }
