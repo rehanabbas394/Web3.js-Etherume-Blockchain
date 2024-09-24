@@ -7,7 +7,7 @@ import JSONbig from 'json-bigint';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
+  @Get('/h')
   getHello(): string {
     return this.appService.getHello();
   }
@@ -35,6 +35,11 @@ export class AppController {
       message: 'Contract updated successfully',
       updatedX: result.updatedX.toString(),
     };
+  }
+
+  @Post('/')
+  compileSM(x:number){
+    return this.appService.DeployContract()
   }
   
 }
